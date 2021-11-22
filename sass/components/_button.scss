@@ -1,0 +1,74 @@
+.btn__rounded {
+    &,
+    &:link,
+    &:visited {
+        text-align: center;
+        width: 150px; 
+        color: $color-primary;
+        position: relative;
+        padding: 0.8rem 1.7rem 0.8rem 1.7rem;
+        margin: 0;
+        border: none;
+        font-size: $default-font-size;
+        font-family: "Roboto", sans-serif;
+        background-color: $color-white;
+        display: block;
+        border-radius: 50rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+        background: $color-primary;
+        color: $color-white;  
+        }
+    }
+
+    &--border {
+        background-color: transparent;
+        color: $color-white;
+        border: 1px solid $color-white;
+        margin-top: 3rem;
+        font-size: 1.4rem;
+        width: 170px;
+        transition: all .4s ease-in-out;
+    }
+    
+    &--cta {
+        width: 170px;
+        color: $color-white;
+        background-color: $color-cta;
+        margin-top: 3rem;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-cta;
+            transform: scale(1.1);
+        }
+    }
+}
+
+@include respond(tab-land) {
+    .btn__rounded--border {
+        display: block;
+        margin: 0 auto;
+    }
+} 
+
+@include respond(phone) {
+    .btn__rounded--border {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+@include respond(tab-land) {
+    .btn__rounded--header {
+        position: relative;
+        margin: 2.5rem auto;
+        background: $color-primary;
+        color: $color-white;  
+    }
+}     

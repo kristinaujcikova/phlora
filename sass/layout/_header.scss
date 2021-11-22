@@ -1,0 +1,100 @@
+.header {
+    width: 100%; 
+    height: 100vh;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+
+
+    &__img {
+        min-height: 100vh;
+        @include photo;
+        overflow: hidden;
+    }
+ 
+    &__half {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; 
+        background-color: $color-overlay;
+    }
+
+    &__content {
+        color: $color-white;
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        right: 2%;
+    }
+
+    &__heading {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-bottom: 2.5rem;
+        letter-spacing: .1rem;
+    }
+
+    & p {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+}  
+
+#section__scroll { 
+    position: absolute;
+    z-index: 100;
+    left:50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+
+
+@include respond(tab-land) {
+    .header__content {
+        top: 10%;
+        text-align: center;
+        left: 4%;
+        right: 4%;
+    } 
+
+    .header button {
+        margin-top: 3rem;
+    }      
+}
+
+@include respond(big-desktop) {
+    .header__content {
+        top: 25%;
+        left: 10%;
+        right: 4%;
+        bottom: 2%;
+    }    
+}
+
+@include respond(tab-port) {
+    .header__half {
+        width: 60%
+    }    
+}
+
+
+@include respond(phone) {
+    .header__half {
+        width: 100%;
+    }    
+}
+
+@include respond(big-desktop) {
+    .header__half {
+        width: 50%
+    }    
+}
+
+
+
+
+        

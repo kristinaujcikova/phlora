@@ -1,0 +1,46 @@
+.container-fluid-reset,
+.row-reset {
+    padding: 0 !important;
+}
+
+.text {
+    position: relative;
+    background-color: $color-background;
+    padding: 9rem 3rem 5rem 8rem;
+    color: $color-text;
+
+    &__img {
+        padding: 0;
+        @include photo;
+    }
+
+    & p {
+        max-width: 90%;
+        font-size: $default-font-size;
+        margin-bottom: 1.5rem;
+
+        & span {
+            color: $color-black;
+        }
+    }
+}
+
+
+@include respond(big-desktop) {
+    .text__img img{
+        height: 100%;
+    }
+}  
+
+@media only screen and (max-width: 87.5em) { 
+        .text__img img{
+            height: 100%;
+        }
+    }
+
+
+@include respond(tab-land) {
+    .text__img img{
+        height: 100%;
+    }
+} 

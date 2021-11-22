@@ -1,0 +1,150 @@
+nav .container {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    z-index: 90000;
+
+    &-brand {
+        height: 8rem;
+        width: auto;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        object-fit: cover;
+        padding: 0;
+    }
+
+    &__logo {
+        height: 8rem;
+        width: auto;
+    }
+}
+
+ 
+.menu {
+    li {
+        padding: 0 2.2rem;
+
+      i {
+        margin-right: 0.5rem;
+      }
+ 
+      a {
+        font-size: 1.7rem;
+        font-family: "Roboto", sans-serif;
+        color: $color-white !important;
+        padding: 0 0.7rem;
+        font-weight: 400;     
+        text-decoration: none; 
+      }
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+}
+
+// HOVER
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    color: $color-background;
+  }
+} 
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $color-background;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover:after { 
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-toggler {
+  z-index: 5000;
+}
+
+svg {
+  margin-right: .5rem;
+}
+
+@media only screen and (max-width: 79.375rem) { 
+  .menu li {
+    padding: 0 1.5rem;
+  }
+}
+
+@include respond(tab-land) {
+  .navbar {
+    position: relative;
+    background-color: $color-white;
+    left: 0;
+    right: 0;
+  }
+
+  .navbar__logo {
+    height: 6rem;
+  }
+
+  .navbar-brand {
+    height: 6rem;
+  }
+
+  .navbar-toggler {
+    font-size: 2rem;
+    line-height: 1;
+    background-color: $color-primary;
+    margin: 2rem;
+    border-radius: 0;
+  }
+
+  .menu li a {
+    color: $color-primary !important;
+  }
+
+  .menu li {
+    padding: 2rem 0;
+    text-align: center;   
+  }
+
+  .nav-item {
+    padding: 2rem 0;
+    text-align: center;   
+  }
+
+  .hamburger__icon {
+    color: $color-white;
+  }
+
+  .nav-link:after {
+    background-color: $color-primary;
+  }
+
+  nav .container{
+    max-width: 100%;
+  }
+}
+
